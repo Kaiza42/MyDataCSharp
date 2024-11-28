@@ -78,9 +78,9 @@ int[] mesCiguaretteParJour;
 
 // apres je lui donne le nombre d'emplacement que je souhaite dans ce cas la 7 
  mesCiguaretteParJour = new int [7];
-// faut prendre en compte que le tableau comence par 0 donc techeniquement j'ai 8 emplacement 
+// faut prendre en compte que le tableau comence par 0 
 // une autre façon de l'ecrire : 
-// int [] mesCiguaretteParJour = new int[8]
+// int [] mesCiguaretteParJour = new int[7]
 
 // ensuite ajoutons lui des information a ce tableau ? 
 // Imaginons que j'ai fumer 20 ciguarette le 2e jour donc je vais ecrire 
@@ -89,16 +89,24 @@ mesCiguaretteParJour[1] = 20;
 
 //maintenant je souhaiterais l'afficher 
 
-console.WhriteLine(mesCiguaretteParJour[1])
+console.WhriteLine(mesCiguaretteParJour[1]);
 
 // Mais ajouter une valeur emplacement par emplacement c'est long en vrai nan ? 
 
 
 // Je vais créer un tableau et remplir tout les emplacement 
+string[] lesCiguaretteParJour;
 
-lesCiguaretteParJour = new int[] {6,2,5,4,9,7,5}
+lesCiguaretteParJour = new int[] {6,2,5,4,9,7,5};
 
 
+
+// Apres on peu créer un tableau multi dimensionel 
+// pour resumé sa c'est comme si t'avais un apartement donc un bâtiment avec 8 apartement Mais 4 etage
+
+int [,] apartement = new int[4,2];
+// Expliquons un peu Comment on sais que c'est un tableau multi-dimensionel ? il y a le [,] sa fait un tableau en 2D mais par
+// exemple on pourais [,,] faire sa et sa deviendrais un tableau en 3D sa peu continuer indéfiniment 
 
 ```
 
