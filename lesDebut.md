@@ -67,3 +67,38 @@ int deuxAnsPlusTard += monAutreSoeur + 2;  // Sa afficheras 22
 
 ```
 
+## les array 
+
+Imaginons que je souhaite compter le nombre de ciguarette par jour 
+
+```cs 
+
+int[] mesCiguaretteParJour;
+// déclaration de la variable de type int avec une array vide 
+
+// apres je lui donne le nombre d'emplacement que je souhaite dans ce cas la 7 
+ mesCiguaretteParJour = new int [7];
+// faut prendre en compte que le tableau comence par 0 donc techeniquement j'ai 8 emplacement 
+// une autre façon de l'ecrire : 
+// int [] mesCiguaretteParJour = new int[8]
+
+// ensuite ajoutons lui des information a ce tableau ? 
+// Imaginons que j'ai fumer 20 ciguarette le 2e jour donc je vais ecrire 
+mesCiguaretteParJour[1] = 20; 
+// donc 2e emplacement contient 20 
+
+//maintenant je souhaiterais l'afficher 
+
+console.WhriteLine(mesCiguaretteParJour[1])
+
+// Mais ajouter une valeur emplacement par emplacement c'est long en vrai nan ? 
+
+
+// Je vais créer un tableau et remplir tout les emplacement 
+
+lesCiguaretteParJour = new int[] {6,2,5,4,9,7,5}
+
+
+
+```
+
