@@ -1,6 +1,6 @@
 # ici on va comencer du tout debut déclaration de variable ect 
 
-Evidament les operateur  ``*`` Multiplication ou ``*=`` <br>
+Evidament les operateur <br> ``*`` Multiplication ou ``*=`` <br>
                          ``+`` Addition ou ``+=``<br>
                          ``-`` Soustraction ou ``-=``<br>
                          ``/`` Division Ou ``/=``<br>
