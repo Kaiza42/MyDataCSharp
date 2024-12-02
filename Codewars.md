@@ -329,3 +329,91 @@ public static class Kata
 }
 
 ```
+
+### Opposite number kyu 8
+
+```cs 
+using System;
+
+public class Kata
+    {
+        public  static int Opposite(int number)
+        {
+            // Happy Coding
+          return (-number);
+        }
+    }
+
+```
+
+### Beginner Series #3 Sum of Numbers kyu 7
+```cs 
+  using System;
+  public class Sum
+  {
+     public int GetSum(int a, int b)
+     {
+       if (a == b){
+    return a;
+  }else if (a > b){
+    return a + GetSum(a-1,b);
+  } else {
+    return a + GetSum(a+1,b);
+  }
+     }
+  }
+
+```
+### Is the string uppercase? kyu 8
+
+```cs
+
+public static class StringExtensions
+{
+  public static bool IsUpperCase(this string text)
+  {
+  for( int i = 0; i < text.Length ; i++)
+    {
+    if (char.IsLetter(text[i]) && !char.IsUpper(text[i]))
+      {
+      return false;
+    }
+      
+    }
+    return true;
+  }
+  }
+```
+### MakeUpperCase kyu 8
+
+```cs 
+  public class Kata
+  {
+        public static string MakeUpperCase(string str)
+        {
+             return str.ToUpper();
+        }
+
+  }
+```
+
+
+### Convert a Boolean to a String kyu 8
+
+```cs 
+using System;
+
+public class kata
+{
+  public static string BooleanToString(bool b)
+  {
+    //Please don't delete me!
+    return b.ToString();
+  }
+}
+```
+
+
+
+
+
