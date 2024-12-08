@@ -54,6 +54,44 @@ string vide = string.Empty;
 // permet que la chainne sois vide donc le contenue est "" 
 
 ```
+### ToUpper & ToLower
 
+```cs
+string name = "NAME";
+
+//ToLower pour passer tout le texte en minuscule 
+Console.WriteLine(name.ToLower());
+
+string Name = "name";
+//ToUpper pur passer tout le texte en majuscule
+Console.WriteLine(Name.ToUpper());
+```
+
+### IndexOf
+
+IndexOf va chercher le premier élément demander 
+```cs
+string texte = "Bonjour tout le monde";
+int index = texte.IndexOf("t"); // 8 car le premier T est a la place 8
+Console.WriteLine(index);
+
+// on peut comencer l'index of apartir d'un endroit precis 
+string texte = "Bonjour tout le monde";
+int index = texte.IndexOf('o', 5); ici 
+Console.WriteLine(index);
+```
+
+
+### Sort
+
+dans cette exemple ``Sort();`` va changer l'ordre de la liste pour mettre un ordre alphabetique 
+```cs
+var names = new List<string> {"yes","no","myabe", "idon't know"  };
+names.Sort();
+foreach (var name in names)
+{
+  Console.WriteLine($"Hello {name}!");
+}
+```
 
 

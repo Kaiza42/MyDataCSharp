@@ -179,3 +179,15 @@ catch(Exeption ex)
 }
 
 ```
+
+## foreach 
+
+exemple de foreach 
+
+```cs 
+var names = new List<string> {"yes","no","myabe", "idon't know"  };
+foreach (var name in names)
+{
+  Console.WriteLine($"Hello {name}!");
+}
+```
