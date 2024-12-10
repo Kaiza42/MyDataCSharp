@@ -24,6 +24,46 @@ string mesChiffre = "125896";
 int mesVraiChiffre = int.Parse(MesChiffre);
 // sa peu marcher avec float double decimal 
 ```
+
+### TryParse
+
+Dans l'idée  c'est la meme choses que parse mais cette fois tu a un retour si la conversion est reussi ou non 
+l'enxemple utiliser a était fait dans un exo 
+```cs
+int conversionSaisie;
+int trouveMoi = 0;
+int result = 0;
+
+do
+{
+  // la saisie utilisateur Qui doit etre dans la boucle Pour continuer la saisie utilisateur 
+    string saisie = Console.ReadLine();
+
+// Tryparse permet la conversion de la saisie de  String a Int et out peut renvoyer true ou false et fait le resultat demander.
+    if (int.TryParse(saisie, out conversionSaisie))
+    {
+      // si conversionSaisie est différent de trouveMoi Alors affiche la Console 
+        if (conversionSaisie != trouveMoi)
+        {
+            Console.WriteLine("hey c'est pas compliquer .. un chiffre entre 0 et 9 ");
+
+        }
+        else
+        {
+          // Sinon bah bravo.
+            Console.WriteLine("Bravo.");
+
+        }
+        // le resultat de toute les saisie utilisateur 
+        result += conversionSaisie;
+        Console.WriteLine("le resultat de toute tes saisie donne sa " + result);
+
+    }
+    la condition pour continuer la boucle 
+} while (conversionSaisie != trouveMoi);
+
+
+```
 ### Split 
 
 transformer ta string en array 

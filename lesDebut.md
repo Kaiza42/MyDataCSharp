@@ -4,6 +4,7 @@ Evidament les operateur <br> ``*`` Multiplication ou ``*=`` <br>
                          ``+`` Addition ou ``+=``<br>
                          ``-`` Soustraction ou ``-=``<br>
                          ``/`` Division Ou ``/=``<br>
+                         ``%`` Modulo ou ``%=``<br>
 
  le type ``string`` c'est une chaine de caractere 
 
@@ -17,6 +18,9 @@ Pour l'apellation l'exemple : ``double age = 14.8d`` ou ``double age = 14.8``
 
 le type ``decimal`` 128bit precision 28 a 29 chiffre / lecriture c'est ``3.24m`` ou ``3.24M`` <br>
 Pour l'apellation l'exemple : ``decimal age = 14.8m``
+
+le type ``bool`` vrai ou faux 
+par convetion nous utiliserons pour déclarer une variable ``bool`` nous utiliserons ``is``  donc exemple :<br> ``bool isMajeur = true``
 
 
 ```cs
@@ -33,7 +37,6 @@ double monVraiAge = 18.5
 string myName = "Jean";
 
 // Maintenant imaginons je souhaite modifier ses varibale 
-
 // plusieur ecriture possible 
 
 // Maintenant mon age a 19 
@@ -97,12 +100,10 @@ console.WhriteLine(mesCiguaretteParJour[1]);
 // Mais ajouter une valeur emplacement par emplacement c'est long en vrai nan ? 
 
 
-// Je vais créer un tableau et remplir tout les emplacement 
+// Je vais créer un tableau et le remplir 
 string[] lesCiguaretteParJour;
 
 lesCiguaretteParJour = new int[] {6,2,5,4,9,7,5};
-
-
 
 // Apres on peu créer un tableau multi dimensionel 
 // pour resumé sa c'est comme si t'avais un apartement donc un bâtiment avec 8 apartement Mais 4 etage
@@ -346,7 +347,6 @@ class Program
         moteur.Tourner();  // Fonctionne, car dans le même assemblage
     }
 }
-
 ```
 
 
