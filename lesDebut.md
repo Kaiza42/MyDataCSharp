@@ -19,9 +19,10 @@ Pour l'apellation l'exemple : ``double age = 14.8d`` ou ``double age = 14.8``
 le type ``decimal`` 128bit precision 28 a 29 chiffre / lecriture c'est ``3.24m`` ou ``3.24M`` <br>
 Pour l'apellation l'exemple : ``decimal age = 14.8m``
 
-le type ``bool`` vrai ou faux 
+le type ``bool`` vrai ou faux <br>
 par convetion nous utiliserons pour déclarer une variable ``bool`` nous utiliserons ``is``  donc exemple :<br> ``bool isMajeur = true``
 
+le type ``char`` se déclare comme ceci ```char test = 'a'``` les apostrophe son a respect les valeurs char sont des valeurs unicodes
 
 ```cs
 // tous sa se sont des Variable 
