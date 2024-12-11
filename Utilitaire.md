@@ -1,4 +1,4 @@
-# ici seras noté des themre "utilitaire" 
+# ici seras noté des therme "utilitaire" 
 
 
 ### range 
@@ -94,6 +94,7 @@ string vide = string.Empty;
 // permet que la chainne sois vide donc le contenue est "" 
 
 ```
+
 ### ToUpper & ToLower
 
 ```cs
@@ -133,5 +134,22 @@ foreach (var name in names)
   Console.WriteLine($"Hello {name}!");
 }
 ```
+
+### contains 
+verifie si une chaine de caractère contient l'élément demander 
+
+```cs
+// je declare ma chaine de caractère 
+string fruit = "amande";
+
+ma variable verifications va vérifier grace a Contains si "a" est dans la chaine de caractère de la variable "fruit"
+bool verifications = fruit.Contains("a");
+
+Console.WriteLine(verifications);
+```
+
+
+
+
 
 

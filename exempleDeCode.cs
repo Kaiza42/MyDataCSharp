@@ -5,16 +5,16 @@
 
 //l'exemple sert a quoi a dire qu'on peut aller chercher des valeur dans un tableau comme ceci
 
-// int[] combienDeLivre = new int[]{20 , 10 , 15, 25 , 35};
+int[] combienDeLivre = new int[]{20 , 10 , 15, 25 , 35};
 
-// for (int n = 0; n <= 40 ; n++)
-// {
-//     if(combienDeLivre[n] == 25)
-//     {
-//         Console.WriteLine("j'ai " + combienDeLivre[n] + " livre sa fait peu non ?");
-//         break; // le break sert a dire ta trouver ce que tu chercher non ? on s'arrete la.
-//     }
-// }
+for (int n = 0; n <= 40 ; n++)
+{
+    if(combienDeLivre[n] == 25)
+    {
+        Console.WriteLine("j'ai " + combienDeLivre[n] + " livre sa fait peu non ?");
+        break; // le break sert a dire ta trouver ce que tu chercher non ? on s'arrete la.
+    }
+}
 // fin des livre
 
 

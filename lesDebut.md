@@ -72,6 +72,16 @@ int deuxAnsPlusTard += monAutreSoeur + 2;  // Sa afficheras 22
 
 ```
 
+## afficher des variable
+```cs
+Console.WriteLine(maVariable + monAutreVariable + "tout sa était des varibale");
+Console.WriteLine($"{maVariable} {monAutreVariable} tout sa était des variable");
+```
+## saisie utilisateur 
+```cs
+string saisie = Console.ReadLine();
+```
+
 ## les array 
 
 Imaginons que je souhaite compter le nombre de ciguarette par jour 
@@ -119,7 +129,7 @@ int [,] apartement = new int[4,2];
 
 ```cs
 // Donc on déclare comme ceci 
-Ilist<string> testList = new List<string>();
+IList<string> testList = new List<string>();
 
 // du coup on va ajouter du contenue a ma liste 
 testList.Add("test1");
@@ -136,7 +146,18 @@ testList.RemoveAt(2)
 foreach (string testLists in testlist)
 {
    console.WhriteLine(testLists)
- 
+}
+
+// on peut verifier si une liste est vide 
+
+// le count va compter chaque élément de la liste et si il est strictement égale a 0 alors la liste et vide 
+if(testList.Count == 0){
+    Console.WriteLine("la liste est vide");
+}
+// sinon la liste n'est pas vide 
+else
+{
+Console.WriteLine("La list n'est pas vide")
 }
 ```
 
