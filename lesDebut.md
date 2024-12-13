@@ -22,7 +22,7 @@ Pour l'apellation l'exemple : ``decimal age = 14.8m``
 le type ``bool`` vrai ou faux <br>
 par convetion nous utiliserons pour déclarer une variable ``bool`` nous utiliserons ``is``  donc exemple :<br> ``bool isMajeur = true``
 
-le type ``char`` se déclare comme ceci ```char test = 'a'``` les apostrophe son a respect les valeurs char sont des valeurs unicodes
+le type ``char`` 16bit  se déclare comme ceci ```char test = 'a'``` les apostrophe son a respect les valeurs char sont des valeurs unicodes
 
 ```cs
 // tous sa se sont des Variable 

@@ -148,6 +148,33 @@ bool verifications = fruit.Contains("a");
 Console.WriteLine(verifications);
 ```
 
+### ToString
+En sois ToString change une variable double pour l'exemple en chaine de caractère 
+
+```cs
+double n = 25.25; 
+
+Console.WriteLine(n.ToString(""));
+sa afficheras 25.25
+//maintenant imaginons que nous ne souhaitons pas afficher la décimal
+double n = 25.25; 
+
+Console.WriteLine(n.ToString("0"));
+// maintenant uniquement le premier chiffre de la virgule 
+double n = 25.25; 
+
+Console.WriteLine(n.ToString("0.0"));
+// Sa afficheras 25.3 sa arrondis au supérieur 
+//évidament on peut faire sa pour afficher autant de nombre en decimal qu'on veut 
+double n = 25.25; 
+
+Console.WriteLine(n.ToString("0.00"));
+//sa afficheras 25.25
+// ect
+```
+
+###
+
 
 
 
