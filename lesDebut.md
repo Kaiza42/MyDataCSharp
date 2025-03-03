@@ -5,7 +5,7 @@ Evidament les operateur <br> ``*`` Multiplication ou ``*=`` <br>
                          ``-`` Soustraction ou ``-=``<br>
                          ``/`` Division Ou ``/=``<br>
                          ``%`` Modulo ou ``%=``<br>
-
+                         
  le type ``string`` c'est une chaine de caractere 
 
  le type ``Integer`` racourci par ``int`` prends en compte les nombre entier
@@ -23,6 +23,9 @@ le type ``bool`` vrai ou faux <br>
 par convetion nous utiliserons pour déclarer une variable ``bool`` nous utiliserons ``is``  donc exemple :<br> ``bool isMajeur = true``
 
 le type ``char`` 16bit  se déclare comme ceci ```char test = 'a'``` les apostrophe son a respect les valeurs char sont des valeurs unicodes
+
+Le type ``null`` représente une absence de valeur
+
 
 ```cs
 // tous sa se sont des Variable 
@@ -73,22 +76,28 @@ int deuxAnsPlusTard += monAutreSoeur + 2;  // Sa afficheras 22
 
 ```
 
-## afficher des variable
+## afficher 
+
+
+```Console.WriteLine``` va sauter une ligne APRES l'affichage <br>
+Alors que  ```Console.Write``` va afficher la suite
 ```cs
 Console.WriteLine(maVariable + monAutreVariable + "tout sa était des varibale");
 Console.WriteLine($"{maVariable} {monAutreVariable} tout sa était des variable");
+
+Console.Write(maVariable + monAutreViable + "tout sa était des variable");
+Console.Write($"{maVariable} {monAutreVariable} Tout sa était des variable");
 ```
 ## saisie utilisateur 
 ```cs
 string saisie = Console.ReadLine();
 ```
 
-## les array 
+## les array (tableau)
 
 Imaginons que je souhaite compter le nombre de ciguarette par jour 
 
 ```cs 
-
 int[] mesCiguaretteParJour;
 // déclaration de la variable de type int avec une array vide 
 
@@ -109,7 +118,6 @@ mesCiguaretteParJour[1] = 20;
 console.WhriteLine(mesCiguaretteParJour[1]);
 
 // Mais ajouter une valeur emplacement par emplacement c'est long en vrai nan ? 
-
 
 // Je vais créer un tableau et le remplir 
 string[] lesCiguaretteParJour;
@@ -236,7 +244,7 @@ foreach (string ingredients in ingredient)
 ## les niveau d'acces 
 
 
-## Public 
+### Public 
 
 ```cs
 
@@ -264,7 +272,7 @@ class Program
 //  dans cette exemple on peut utiliser "Voiture"  et la sous class "Demarrer" dans une autre class car c'est "public"
 ```
 
-## private 
+### private 
 
 
 que fait private concrètement ? 
@@ -302,7 +310,7 @@ class Program
 
 ```
 
-## protected 
+### protected 
 
 protected est accecible dans sa class et ses sous class
 
@@ -342,7 +350,7 @@ class Program
 ```
 
 
-## internal
+### internal
 
 Projet ou assemblage 
 
@@ -372,3 +380,51 @@ class Program
 ```
 
 
+## fonction
+
+
+exemple de fonction 
+
+```cs
+void Bienvenue(string prenom, string nom)
+{
+Console.WriteLine("Bonjour" + prenom + " " + nom);
+}
+
+Bienvenue("jean", claude);
+
+```
+
+## retour d'une fonction 
+
+
+il est possible de renvoyez une valeur a l'aide d'un mot-clé 
+**return**
+le type de retour doit correspondre au type de déclaration
+
+```cs
+double additionner(double nombreUn, double nombreDeux)
+{
+double somme = nombreUn + nombreDeux;
+return somme;
+}
+
+Additionner(1,2);
+
+double resultat = Additionner(1,2) * 5;
+```
+
+## paramètres passés par référence 
+
+par defaut, les paramètre sont passé par des valeurs
+Mais il est possinle de les passer par réfférence a l'aide de ces mots:
+``in`` : la lecture seule 
+``out`` : écriture Obligatoire (la fonction doit imperativement 
+atribuer une valeur)
+```ref`` lecture et écriture obligatoire 
+
+```cs
+void ModifierNombre ( ref int nombre){
+    nombre = nombre *2;
+}
+```

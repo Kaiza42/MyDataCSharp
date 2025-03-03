@@ -135,6 +135,13 @@ foreach (var name in names)
 }
 ```
 
+### Trim
+Trim va suprimer les espace avant et apres 
+
+```cs
+Console.WriteLine($"{value.Trim()}");
+```
+
 ### contains 
 verifie si une chaine de caractère contient l'élément demander 
 
@@ -172,9 +179,108 @@ Console.WriteLine(n.ToString("0.00"));
 //sa afficheras 25.25
 // ect
 ```
+### Random 
 
-###
+de ma compréhension ``Random`` est une classe sortie de la bibliothèque standard c# (system)
+``bouleDeNoel`` est l'objet instancier par la classe ``Random``
+```cs
+// déclaration de la variable random 
+Random bouleDeNoel = new Random();
 
+// Plusieur façon de voir la suite de ma petite bouleDeNoel 
+// ici boule de noel va générer un chiffre aléatoire entre 0 a 9 car la génération de chiffre fait 10 -1
+int vraiBouleDeNoel = bouleDeNoel.Next(10);
+// ici cela va générer un chiffre aléatoire entre 1 et 99 donc 1 a 100 -1
+int fausseBouleDeNoel = bouleDeNoel.Next(1, 100);
+
+// random a virgule 
+double fractionUn = 0.010000;
+double fractionDeux = 100.1000;
+// cela peut générer un chiffre aléatoire en les deux variable 
+double yesBouleDeNoel = bouleDeNoel.NextDouble(); * (fractionUn - fractionDeux);
+
+// faire un booléan aléatoire 
+//la logique dit que un  booléan un 0 et un 1 donc il va générer un chiffre entre 0 et 1 qui est un boolean aléatoire 
+bool booleanAléatoire = bouleDenoel.Next(0,2) == 0; 
+
+// On peut aussi faire 1 chance sur X pour gerer l'aléatoire 
+int variable = bouleDeNeige.Next(0,101) < 25; // 1 chance sur 4 
+
+int[] array = { 10, 20, 30, 40, 50 };
+// generer un random d'un tableau 
+int randomIndex = bouleDeNeige.Next(0, array.Length);
+```
+### les type signé 
+
+###### sbyte 
+
+taille 1 octect (8 byte) <br>
+plage de valeur -128 a 127 <br>
+```sbyte signedByte = -120;```
+
+
+###### short 
+
+taille 2 octects (16 bits)<br>
+Plage de valeurs : -32 768 à 32 767.<br>
+```short signedShort = -32000;```
+
+###### long 
+
+Taille : 8 octets (64 bits) <br>
+Plage de valeurs : -9 223 372 036 854 775 808 à 9 223 372 036 854 775 807 <br>
+```long signedLong = -100000000000;```
+
+###### int, decimal, double, float en font partie 
+
+
+### Min Max Average 
+
+.Min prends la valeur minimal <br>
+.Max prends la valeur maximal <br>
+.Average prends la valeur Moyenne 
+
+```cs
+int[] numbers = { 3,7,1,9,5,4};
+
+int minimal = numbers.Min(); // retourneras la valeur Minimum donc : 1 
+int maximum = numbers.Max(); // retourneras la valeur Maximum donc : 9 
+int millieu = numbers.Average(); // retourne la moyenne donc : 5 
+```
+
+### la couleur dans la console 
+
+```cs
+// background 
+Console.Background = ConsolorColor.Red;
+// donne la couleur rouge au text sa peu etre différente couleur 
+Console.ForeGround = ConsoleColor.Red;
+// va reset la couleur donc Blanc par default
+Console.ResetColor();
+```
+
+### taduction de requete SQL Like / Startwith / EndWith / where / %
+Donc je vais une recherche car la répétition de ligne ne me plais pas trop contexte je fait une api sur une bibliothèque
+Le principe de ma recherche et de faire un filtre qui permet d'éviter de la répétition partout dans mon code et du coup de faire 
+Une simple methode qui en fonction de la demande il affiche la demande dans le format que j'aurais décider 
+Precision : je suis pas tres bon en SQL 
+```cs 
+// je suis tomber sur cette ligne qui ma fortement interesser
+// EF.Functions.Like me permet d'utiliser des expression SQL pour faire ma recherche exemple : Si l'utilisateur va taper "Hello" Il va recherche un élément comme "Hello" donc tout ce qui contient Hello Seras afficher 
+// ensuite EF.Property<string> dit juste que la propriété et une string 
+// ensuite nous avons $"%{value.Trim()}%" donc % expresion SQL pour dire 1 ou plusieur et ensuite value => valeur afficher .Trim() pour suprimer les espace avant et apres.
+livre = livre.Where(instanceDelivre => EF.Functions.Like(EF.Property<string>(instanceDelivre, property.Name), $"%{value.Trim()}%"));
+
+// C'est a peu pres la meme sof que la ce n'est pas un Like mais un StartWith donc Comence avec Pourquoi pas de trim ? car sa comence avec 
+livre = livre.Where(instanceDelivre => EF.Property<string>(instanceDelivre, property.Name).StartsWith(value.Trim()));
+// C'est a peu pres la meme sof que la ce n'est pas un Like mais un EndsWith => termine avec, la pas de trim car sa termine avec 
+livre = livre.Where(instanceDelivre => EF.Property<string>(instanceDelivre, property.Name).EndsWith(value.Trim()));
+
+valeurClasse = valeurClasse.Where(e => EF.Property<DateTime>(e, property.Name).Date == dateValue.Date);
+  
+```
+
+### AsQueryable
 
 
 

@@ -154,7 +154,7 @@ switch (couleurChoisie)
  ```
 
 ## try - catch 
- try et catch son interessant car quand tu va faire du code dans le block try quand le code s'execute le block catch va varifier si il y a une erreure exemple <br>
+ try et catch son interessant car quand tu va faire du code dans le block try quand le code s'execute le block catch va verifier si il y a une erreure exemple <br>
  le code de pase ne va pas s'executer c'est juste un exemple
 
 ```cs
