@@ -300,38 +300,8 @@ phrase.Append("!");
 Console.WriteLine(phrase.ToString()); // Affiche : Bonjour le monde!
 ```
 
-## Fonctions utilitaires : PromptX
 
-Ces fonctions permettent de simplifier la récupération d'entrées utilisateur dans une application console. Elles encapsulent `Console.ReadLine()` avec de la validation ou du formatage selon le type attendu.
 
-### Tableau des fonctions `PromptX`
-
-| Méthode            | Retour         | Description                                                                 |
-|--------------------|----------------|-----------------------------------------------------------------------------|
-| `PromptString`     | `string`       | Lit une chaîne de caractères libre, sans validation spécifique.            |
-| `PromptInt`        | `int`          | Demande un entier. Repose sur `int.TryParse()` pour valider l'entrée.      |
-| `PromptDouble`     | `double`       | Identique à `PromptInt` mais pour les nombres à virgule.                   |
-| `PromptYesNo`      | `bool`         | Lit une réponse Oui/Non (ex: y/n, oui/non) et renvoie `true` ou `false`.   |
-| `PromptChoice`     | `int`/`string` | Affiche un menu avec plusieurs options et récupère le choix de l’utilisateur.|
-
----
-
-### Utilité des `PromptX`
-
-- ✅ **Lisibilité** : le code principal reste propre et lisible, sans logique de validation à chaque ligne.
-- 🔁 **Réutilisable** : une fois écrites, ces méthodes peuvent être utilisées partout dans tes projets console.
-- 🛡 **Fiabilité** : évite les plantages dus à des entrées invalides (`TryParse`, `Trim()`, `ToLower()`, etc.).
-- 🚀 **Productivité** : tu gagnes du temps à chaque nouvelle app CLI.
-
----
-
-### Exemple d'utilisation dans un vrai scénario
-
-```csharp
-int age = PromptInt("Quel est ton âge ? ");
-bool accepteConditions = PromptYesNo("Acceptes-tu les conditions ? (y/n) : ");
-string nom = PromptString("Entre ton nom : ");
-```
 
 
 
