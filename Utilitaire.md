@@ -279,8 +279,27 @@ livre = livre.Where(instanceDelivre => EF.Property<string>(instanceDelivre, prop
 valeurClasse = valeurClasse.Where(e => EF.Property<DateTime>(e, property.Name).Date == dateValue.Date);
   
 ```
+## StringBuilder
 
-### AsQueryable
+`StringBuilder` est une classe utilisée pour construire des chaînes de caractères de manière efficace, surtout quand tu dois faire plusieurs ajouts. Contrairement au `+`, il ne crée pas de nouvelles chaînes à chaque ajout, ce qui améliore les performances.
+
+### Exemple simple : construire une phrase mot par mot
+
+```csharp
+using System.Text;
+
+StringBuilder phrase = new StringBuilder();
+
+phrase.Append("Bonjour");
+phrase.Append(" ");
+phrase.Append("le");
+phrase.Append(" ");
+phrase.Append("monde");
+phrase.Append("!");
+
+Console.WriteLine(phrase.ToString()); // Affiche : Bonjour le monde!
+```
+
 
 
 
